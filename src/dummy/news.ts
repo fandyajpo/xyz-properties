@@ -1,0 +1,58 @@
+import type { NewsArticle } from '@/types/common.types'
+
+export const dummyNews: NewsArticle[] = [
+  {
+    id: 'news_001', category: 'market',
+    title: 'Bali Luxury Villa Market Posts Record Q1 2026 Growth, Outperforming Global Peers',
+    summary: 'Bali\'s luxury residential market recorded a 14.3% average price appreciation in Q1 2026, driven by surging demand from Australian and European investors and a constrained supply of premium cliff-top and beachfront sites.',
+    content: '',
+    imageUrl: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=800&q=80',
+    author: 'Sarah Mitchell', publishedAt: '2026-05-15T09:00:00Z',
+    readTime: 6, featured: true,
+  },
+  {
+    id: 'news_002', category: 'company',
+    title: 'XYZ Properties Achieves ISO 9001:2015 Quality Management Certification',
+    summary: 'XYZ Properties Bali is proud to announce the successful achievement of ISO 9001:2015 certification, reinforcing our commitment to delivering world-class investor experiences and construction quality across all developments.',
+    content: '',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+    author: 'XYZ Communications', publishedAt: '2026-05-10T10:30:00Z',
+    readTime: 4, featured: false,
+  },
+  {
+    id: 'news_003', category: 'investment',
+    title: 'Australian SMSF Investors Drive 38% Surge in Bali Property Acquisitions',
+    summary: 'Self-managed super fund investment in Bali luxury property has surged 38% year-on-year, as Australian trustees seek higher-yielding offshore real assets amid domestic market pressures and competitive rental returns of 10–15%.',
+    content: '',
+    imageUrl: 'https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&q=80',
+    author: 'James Thornton', publishedAt: '2026-05-08T08:00:00Z',
+    readTime: 8, featured: true,
+  },
+  {
+    id: 'news_004', category: 'market',
+    title: 'Indonesia\'s New Golden Visa Unlocks Long-Term Residency for Property Investors',
+    summary: 'Indonesia\'s expanded Golden Visa program now grants 5-year renewable residency to foreign property investors with minimum investment thresholds of USD $350,000. Bali luxury buyers are primary beneficiaries.',
+    content: '',
+    imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',
+    author: 'Linda Kurniawan', publishedAt: '2026-04-28T11:00:00Z',
+    readTime: 5, featured: false,
+  },
+  {
+    id: 'news_005', category: 'company',
+    title: 'Uluwatu Ocean Villas Awarded Best Luxury Development at Asia Property Awards 2026',
+    summary: 'XYZ Properties\' flagship Uluwatu Ocean Villas development has been awarded Best Luxury Residential Development in Indonesia at the Asia Property Awards 2026, cementing its position as Bali\'s most prestigious address.',
+    content: '',
+    imageUrl: 'https://images.unsplash.com/photo-1540541338537-1220205ac2cb?w=800&q=80',
+    author: 'XYZ Communications', publishedAt: '2026-04-22T14:00:00Z',
+    readTime: 3, featured: false,
+  },
+  {
+    id: 'news_006', category: 'investment',
+    title: '2026 Bali Rental Yield Report: Uluwatu and Seminyak Lead With 14%+ Returns',
+    summary: 'XYZ Properties\' annual rental yield report confirms that Uluwatu and Seminyak luxury villas continue to lead Bali\'s rental market with gross yields of 12–15%, significantly outperforming Australian residential averages of 3.5%.',
+    content: '',
+    imageUrl: 'https://images.unsplash.com/photo-1582610116397-edb72a8c219c?w=800&q=80',
+    author: 'Marcus Chen', publishedAt: '2026-04-15T09:30:00Z',
+    readTime: 7, featured: false,
+  },
+]
