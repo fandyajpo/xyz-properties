@@ -39,29 +39,23 @@ export function AuthProvider({
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async currentUser => {
+      setFirebaseUser(currentUser)
+
+      if (!currentUser) {
+        setUser(null)
+        setIsLoading(false)
+        return
+      }
+
+      setIsLoading(false)
+
       try {
-        setIsLoading(true)
-        setFirebaseUser(currentUser)
-
-        if (!currentUser) {
-          setUser(null)
-          return
-        }
-
-        console.log('FETCH PROFILE')
-
         const profile = await dbService.getInvestorProfile(
           currentUser.uid
         )
-
-        console.log('PROFILE:', profile)
-
         setUser(profile ?? null)
       } catch (err) {
         console.error('Auth profile fetch error:', err)
-        setUser(null)
-      } finally {
-        setIsLoading(false)
       }
     })
 
@@ -106,7 +100,7 @@ export function AuthProvider({
     () => ({
       user,
       firebaseUser,
-      isAuthenticated: !!user,
+      isAuthenticated: !!firebaseUser,
       isLoading,
       login,
       logout,
