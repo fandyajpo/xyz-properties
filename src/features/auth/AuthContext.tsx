@@ -67,18 +67,17 @@ export function AuthProvider({
     password: string
   ): Promise<boolean> => {
     try {
-      setIsLoading(true)
-
-      await signInWithEmailAndPassword(
+      const credential = await signInWithEmailAndPassword(
         auth,
         email,
         password
       )
 
+      setFirebaseUser(credential.user)
+
       return true
     } catch (err) {
       console.error('Firebase Login Error:', err)
-      setIsLoading(false)
       return false
     }
   }
